@@ -152,6 +152,12 @@ class TestDuckDB(Validator):
             },
         )
         self.validate_all(
+            "VARIANCE_POP(a)",
+            write={
+                "duckdb": "VAR_POP(a)",
+            },
+        )
+        self.validate_all(
             "STR_SPLIT(x, 'a')",
             write={
                 "duckdb": "STR_SPLIT(x, 'a')",
